@@ -3,19 +3,18 @@ package br.com.dio.main;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class SelecaoCandidatos {
+public class DesafioControleFluxo {
 
 	public static void main(String[] args) {
 		System.out.println("SISTEMA DE PROCESSOS SELETIVOS");
 		
-		String[] candidatos = {"RODRIGO", "JULIA", "PEDRO", "ABNER", "MARCELO", "THAMIRIS", "LARISSA"};
+		String[] candidatos = {"RODRIGO", "JULIA", "PEDRO", "ABNER", "LARISSA"};
 		
 		for(String candidato: candidatos) {
 			entrandoEmContato(candidato);
 		}
 	}
 	
-	// Método de contactar os candidatos;
 	public static void entrandoEmContato(String candidato) {
 		int numeroDeTentativas = 1;
 		boolean continuarTentando = true;
@@ -34,7 +33,6 @@ public class SelecaoCandidatos {
 		if(atendeu)
 			System.out.println("\nContato com " + candidato + " na " + numeroDeTentativas + " tentativa");
 		else
-			System.out.println(); 
 			System.out.println("\nNão foi possível o contato com o candidato " + candidato + ", total de tentativas: " + numeroDeTentativas + " realizadas.");
 	}
 	
@@ -43,7 +41,7 @@ public class SelecaoCandidatos {
 	}
 	
 	public static void imprimirSelecionados() {
-			String[] candidatos = {"RODRIGO", "JULIA", "PEDRO", "ABNER", "MARCELO", "THAMIRIS", "LARISSA"}; 
+			String[] candidatos = {"RODRIGO", "JULIA", "PEDRO", "ABNER", "LARISSA"}; 
 			System.out.println("\nImpimindo lista de candidatos");
 			
 			
@@ -57,7 +55,7 @@ public class SelecaoCandidatos {
 		}
 	
 	public static void selecaoDeCandidados() {
-		String[] candidatos = {"RODRIGO", "JULIA", "PEDRO", "ABNER", "MARCELO", "THAMIRIS", "LARISSA"};
+		String[] candidatos = {"RODRIGO", "JULIA", "PEDRO", "ABNER", "LARISSA"};
 		int candidatosSelecionados = 0;
 		int candidatosAtual = 0;
 		double salarioBase = 3000.0;
@@ -84,12 +82,12 @@ public class SelecaoCandidatos {
 	static void analisarCandidatos(double salarioPretendido) {
 		double salarioBase = 3000.0;
 		if(salarioBase > salarioPretendido) {
-			System.out.println("\nContactar candidato.");
+			System.out.println("\nLigar para o candidato.");
 		}
 		else if(salarioBase == salarioPretendido)
-			System.out.println("\nLigar para o próximo candidato.");
+			System.out.println("\nLigar para o candidato com contra proposta.");
 		else {
-			System.out.println("\nAguardando resultado da avaliação dos demais candidatos!");
+			System.out.println("\nAguardando resultado demais candidatos!");
 		}
 	}
 
